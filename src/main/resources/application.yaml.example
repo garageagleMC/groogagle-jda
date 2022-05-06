@@ -1,0 +1,43 @@
+spring:
+  output.ansi.enabled: DETECT
+  data:
+    mongodb:
+      database: ''
+      authentication-database: ''
+      username: ''
+      password: ''
+      host: '127.0.0.1'
+      port: 27017
+      field-naming-strategy: org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy
+
+logging:
+  level.root: INFO
+  file:
+    path: 'logs'
+    name: '${logging.file.path}/groogagle.log'
+
+discord:
+  token: 'TOKEN'
+  default-prefix: '>'
+  developer-mode: true
+  developer-guild: '971858225538404452'
+  status-messages:
+    - Playing Asphalt 9
+    - Watching your races
+    - Watching you
+    - Watching feuerrm's videos
+    - Listening to feuerrm's music
+    - Listening to you
+  # Real PT:
+  pt-guild: '288044166070665216'
+  pt-quiz-logs: '600674612593950720'
+  pt-join-logs: '288047167128600576'
+  pt-welcome-channel: '571684297568944131'
+  pt-driver-role: '361315396739006465'
+  pt-question-role: '570829494529818624'
+
+
+version-control:
+  repository: 'groogagle'
+  owner: 'garageagleMC'
+  provider: 'github.com'

@@ -495,3 +495,35 @@ java.lang.NullPointerException: Cannot invoke "net.dv8tion.jda.api.entities.Text
 2022-05-06 18:25:18.187  INFO 16512 --- [main] n.g.groogagle.meta.SlashCommandAttacher  : Registering Slash Command "ping"
 2022-05-06 18:25:18.188  INFO 16512 --- [main] n.g.groogagle.meta.SlashCommandAttacher  : Registering Slash Command "say"
 2022-05-06 18:25:18.264  INFO 16512 --- [main] n.g.g.GroogagleJdaApplicationTests       : Started GroogagleJdaApplicationTests in 2.102 seconds (JVM running for 2.821)
+2022-05-06 18:42:38.070  INFO 29088 --- [JDA MainWS-ReadThread] n.g.groogagle.model.SlashCommand         : garageagle#1109 (165195486746116096) used slash command: "/ping"
+2022-05-06 18:42:38.354 ERROR 29088 --- [ForkJoinPool.commonPool-worker-4] net.dv8tion.jda.api.requests.RestAction  : RestAction queue returned failure: [ErrorResponseException] 40060: Interaction has already been acknowledged.
+
+net.dv8tion.jda.api.exceptions.ContextException: null
+	at net.dv8tion.jda.api.exceptions.ContextException.here(ContextException.java:54) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.api.requests.Request.<init>(Request.java:71) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.requests.RestActionImpl.queue(RestActionImpl.java:198) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.requests.restaction.interactions.InteractionCallbackImpl.queue(InteractionCallbackImpl.java:98) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.api.requests.RestAction.queue(RestAction.java:573) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.garageagle.groogagle.commands.PingSlashCommand.executeCommand(PingSlashCommand.java:32) ~[classes/:na]
+	at net.garageagle.groogagle.model.SlashCommand.onSlashCommandInteraction(SlashCommand.java:40) ~[classes/:na]
+	at net.dv8tion.jda.api.hooks.ListenerAdapter.onEvent(ListenerAdapter.java:361) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.api.hooks.InterfacedEventManager.handle(InterfacedEventManager.java:96) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.hooks.EventManagerProxy.handleInternally(EventManagerProxy.java:88) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.hooks.EventManagerProxy.handle(EventManagerProxy.java:70) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.JDAImpl.handleEvent(JDAImpl.java:164) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.handle.InteractionCreateHandler.handleCommand(InteractionCreateHandler.java:109) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.handle.InteractionCreateHandler.handleInternally(InteractionCreateHandler.java:80) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.handle.SocketHandler.handle(SocketHandler.java:36) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.requests.WebSocketClient.onDispatch(WebSocketClient.java:957) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.requests.WebSocketClient.onEvent(WebSocketClient.java:844) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.requests.WebSocketClient.handleEvent(WebSocketClient.java:822) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at net.dv8tion.jda.internal.requests.WebSocketClient.onBinaryMessage(WebSocketClient.java:996) ~[JDA-5.0.0-alpha.11.jar:5.0.0-alpha.11]
+	at com.neovisionaries.ws.client.ListenerManager.callOnBinaryMessage(ListenerManager.java:385) ~[nv-websocket-client-2.14.jar:na]
+	at com.neovisionaries.ws.client.ReadingThread.callOnBinaryMessage(ReadingThread.java:276) ~[nv-websocket-client-2.14.jar:na]
+	at com.neovisionaries.ws.client.ReadingThread.handleBinaryFrame(ReadingThread.java:996) ~[nv-websocket-client-2.14.jar:na]
+	at com.neovisionaries.ws.client.ReadingThread.handleFrame(ReadingThread.java:755) ~[nv-websocket-client-2.14.jar:na]
+	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:108) ~[nv-websocket-client-2.14.jar:na]
+	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64) ~[nv-websocket-client-2.14.jar:na]
+	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45) ~[nv-websocket-client-2.14.jar:na]
+
+2022-05-06 18:42:58.681  INFO 29088 --- [JDA MainWS-ReadThread] n.g.groogagle.model.SlashCommand         : garageagle#1109 (165195486746116096) used slash command: "/ping"
