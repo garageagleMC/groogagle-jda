@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>net.garageagle</groupId>
 	<artifactId>groogagle-jda</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>groogagle-jda</name>
 	<description>The groogagle bot written with JDA and Spring Boot.</description>
 	<properties>
