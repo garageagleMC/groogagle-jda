@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM eclipse-temurin:17-alpine
 COPY . /usr/src/groogagle-jda
 WORKDIR /usr/src/groogagle-jda
 RUN mvn clean package
