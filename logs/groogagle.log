@@ -482,3 +482,16 @@ java.lang.NullPointerException: Cannot invoke "net.dv8tion.jda.api.entities.Text
 2022-05-06 16:31:06.113  INFO 29088 --- [JDA MainWS-ReadThread] n.g.groogagle.model.SlashCommand         : garageagle#1109 (165195486746116096) used slash command: "/8ball question: a"
 2022-05-06 16:31:15.305  INFO 29088 --- [JDA MainWS-ReadThread] n.g.groogagle.model.SlashCommand         : garageagle#1109 (165195486746116096) used slash command: "/8ball question: is this rigged?"
 2022-05-06 16:33:09.827  INFO 29088 --- [JDA MainWS-ReadThread] n.g.groogagle.model.SlashCommand         : garageagle#1109 (165195486746116096) used slash command: "/8ball question: Am I a good programmer?"
+2022-05-06 18:25:16.468  INFO 16512 --- [main] n.g.g.GroogagleJdaApplicationTests       : Starting GroogagleJdaApplicationTests using Java 17.0.1 on EaglePC with PID 16512 (started by garag in C:\Users\garag\Documents\PurpleTeam\groogagle-jda)
+2022-05-06 18:25:16.470  INFO 16512 --- [main] n.g.g.GroogagleJdaApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2022-05-06 18:25:16.921  WARN 16512 --- [main] net.dv8tion.jda.api.JDA                  : Automatically disabled CacheFlags due to missing intents
+2022-05-06 18:25:16.922  WARN 16512 --- [main] net.dv8tion.jda.api.JDA                  : Disabled CacheFlag.VOICE_STATE (missing GatewayIntent.GUILD_VOICE_STATES)
+2022-05-06 18:25:16.923  WARN 16512 --- [main] net.dv8tion.jda.api.JDA                  : Disabled CacheFlag.EMOTE (missing GatewayIntent.GUILD_EMOJIS)
+2022-05-06 18:25:16.923  WARN 16512 --- [main] net.dv8tion.jda.api.JDA                  : You can manually disable these flags to remove this warning by using disableCache(CacheFlag.VOICE_STATE, CacheFlag.EMOTE) on your JDABuilder
+2022-05-06 18:25:17.661  INFO 16512 --- [main] net.dv8tion.jda.api.JDA                  : Login Successful!
+2022-05-06 18:25:17.895  INFO 16512 --- [JDA MainWS-ReadThread] n.d.j.internal.requests.WebSocketClient  : Connected to WebSocket
+2022-05-06 18:25:18.080  INFO 16512 --- [JDA MainWS-ReadThread] net.dv8tion.jda.api.JDA                  : Finished Loading!
+2022-05-06 18:25:18.180  INFO 16512 --- [main] n.g.groogagle.meta.SlashCommandAttacher  : Registering Slash Command "8ball"
+2022-05-06 18:25:18.187  INFO 16512 --- [main] n.g.groogagle.meta.SlashCommandAttacher  : Registering Slash Command "ping"
+2022-05-06 18:25:18.188  INFO 16512 --- [main] n.g.groogagle.meta.SlashCommandAttacher  : Registering Slash Command "say"
+2022-05-06 18:25:18.264  INFO 16512 --- [main] n.g.g.GroogagleJdaApplicationTests       : Started GroogagleJdaApplicationTests in 2.102 seconds (JVM running for 2.821)
