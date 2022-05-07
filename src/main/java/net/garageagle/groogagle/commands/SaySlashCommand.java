@@ -14,12 +14,18 @@ import net.garageagle.groogagle.util.Helpers;
 import org.springframework.stereotype.Component;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 @Component
 public class SaySlashCommand extends SlashCommand {
+
+    List<String> allowedUsers = List.of("165195486746116096",
+                                        "212344168364638214",
+                                        "159714126128611328"
+                                        );
 
     public SaySlashCommand() {
         setName("say");
@@ -40,7 +46,7 @@ public class SaySlashCommand extends SlashCommand {
 
     @Override
     public void executeCommand(SlashCommandInteractionEvent event) {
-        if ( !event.getUser().getId().equals(jda.retrieveApplicationInfo().complete().getOwner().getId()) ) {
+        if ( !allowedUsers.contains(event.getUser().getId()) ) {
             Helpers.NoPermission(event).queue();
             return;
         }

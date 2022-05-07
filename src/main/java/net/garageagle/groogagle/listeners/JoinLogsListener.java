@@ -42,7 +42,7 @@ public class JoinLogsListener extends ListenerAdapter {
 
         Role driverRole = event.getGuild().getRoleById(discordConfig.getPtDriverRole());
         Role questionRole = event.getGuild().getRoleById(discordConfig.getPtQuestionRole());
-        event.getGuild().addRoleToMember(event.getMember(), driverRole).queue();
+        //event.getGuild().addRoleToMember(event.getMember(), driverRole).queue();
         event.getGuild().addRoleToMember(event.getMember(), questionRole).queue();
     }
 
