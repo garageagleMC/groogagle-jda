@@ -36,6 +36,10 @@ public class JoinLogsListener extends ListenerAdapter {
                 event.getGuild().getMemberCount()
         ).queue();
 
+        join_channel.getManager()
+                .setTopic("Members in server: %d".formatted(event.getGuild().getMemberCount()))
+                .queue();
+
         Role driverRole = event.getGuild().getRoleById(discordConfig.getPtDriverRole());
         Role questionRole = event.getGuild().getRoleById(discordConfig.getPtQuestionRole());
         event.getGuild().addRoleToMember(event.getMember(), driverRole).queue();
@@ -52,6 +56,10 @@ public class JoinLogsListener extends ListenerAdapter {
                 event.getUser().getAsMention(),
                 event.getGuild().getMemberCount()
         ).queue();
+
+        join_channel.getManager()
+                .setTopic("Members in server: %d".formatted(event.getGuild().getMemberCount()))
+                .queue();
     }
 
     @Override
@@ -64,5 +72,9 @@ public class JoinLogsListener extends ListenerAdapter {
                 event.getUser().getAsMention(),
                 event.getGuild().getMemberCount()
         ).queue();
+
+        join_channel.getManager()
+                .setTopic("Members in server: %d".formatted(event.getGuild().getMemberCount()))
+                .queue();
     }
 }

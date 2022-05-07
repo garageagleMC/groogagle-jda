@@ -1,8 +1,6 @@
 package net.garageagle.groogagle.meta;
 
 import lombok.extern.slf4j.Slf4j;
-import net.dv8tion.jda.api.exceptions.ContextException;
-import net.dv8tion.jda.api.interactions.commands.build.CommandData;
 import net.dv8tion.jda.api.requests.restaction.CommandCreateAction;
 import net.garageagle.groogagle.config.DiscordConfig;
 import net.garageagle.groogagle.model.SlashCommand;
@@ -15,7 +13,7 @@ import java.util.Map;
 
 @Component
 @Slf4j
-public class SlashCommandAttacher {
+public class SlashCommandAttatcher {
 
     private final ApplicationContext applicationContext;
     private final BotService botService;
@@ -23,7 +21,7 @@ public class SlashCommandAttacher {
 
 
     @Autowired
-    public SlashCommandAttacher(final ApplicationContext applicationContext, final BotService botService, final DiscordConfig discordConfig) throws InterruptedException {
+    public SlashCommandAttatcher(final ApplicationContext applicationContext, final BotService botService, final DiscordConfig discordConfig) throws InterruptedException {
         this.applicationContext = applicationContext;
         this.botService = botService;
         this.discordConfig = discordConfig;

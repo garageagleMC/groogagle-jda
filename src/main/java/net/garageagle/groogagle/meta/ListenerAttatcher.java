@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Component
 @Slf4j
-public class ListenerAttacher {
+public class ListenerAttatcher {
 
     private final ApplicationContext applicationContext;
     private final BotService botService;
@@ -20,7 +20,7 @@ public class ListenerAttacher {
     // Instead of doing so above the field, we instead autowire the constructor and spring boot will find
     // All the required arguments for it and injecting the proper classes
     @Autowired
-    public ListenerAttacher(final ApplicationContext applicationContext, final BotService botService) {
+    public ListenerAttatcher(final ApplicationContext applicationContext, final BotService botService) {
         this.applicationContext = applicationContext;
         this.botService = botService;
 
