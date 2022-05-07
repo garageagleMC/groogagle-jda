@@ -21,12 +21,11 @@ public class MentionListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
         if ( event.getAuthor().isBot() ) return;
+        if ( !event.getMessage().isMentioned(jda.getSelfUser()) ) return;
 
-        if ( event.getMessage().isMentioned(jda.getSelfUser()) ) {
-            event.getAuthor().openPrivateChannel()
-                    .flatMap(channel ->
-                            channel.sendMessage("The text command prefix is `" + discordConfig.getDefaultPrefix() + "`"))
-                    .queue();
-        }
+        event.getAuthor().openPrivateChannel()
+                .flatMap(channel ->
+                        channel.sendMessage("The text command prefix is `" + discordConfig.getDefaultPrefix() + "`."))
+                .queue();
     }
 }

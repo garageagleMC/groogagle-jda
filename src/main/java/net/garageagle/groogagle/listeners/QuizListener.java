@@ -21,6 +21,7 @@ public class QuizListener extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
+        if ( !event.getChannelType().isGuild() ) return;
         if ( !event.getGuild().getId().equals(discordConfig.getPtGuild()) ) return;
         if ( !event.getChannel().getName().startsWith("question-") ) return;
 
