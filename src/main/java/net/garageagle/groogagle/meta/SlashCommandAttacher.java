@@ -39,23 +39,18 @@ public class SlashCommandAttacher {
             log.trace("registerSlashCommands() SlashCommand={}", command);
             log.info("Registering Slash Command \"{}\"", command.getName());
 
+            CommandCreateAction upsertCommand;
             if ( !discordConfig.getDeveloperMode() ) {
-                botService.getJDA()
-                        .upsertCommand(command.getName(), command.getDescription())
-                        .addOptions(command.getOptions())
-                        .addSubcommandGroups(command.getSubcommandGroups())
-                        .addSubcommands(command.getSubcommands())
-                        .queue();
-            } else {
-                CommandCreateAction upsertCommand = botService.getJDA().getGuildById(discordConfig.getDeveloperGuild())
+                upsertCommand = botService.getJDA()
                         .upsertCommand(command.getName(), command.getDescription());
-
-                if ( command.getOptions() != null ) upsertCommand.addOptions(command.getOptions());
-                if ( command.getSubcommandGroups() != null ) upsertCommand.addSubcommandGroups(command.getSubcommandGroups());
-                if ( command.getSubcommands() != null ) upsertCommand.addSubcommands(command.getSubcommands());
-                upsertCommand.queue();
+            } else {
+                upsertCommand = botService.getJDA().getGuildById(discordConfig.getDeveloperGuild())
+                        .upsertCommand(command.getName(), command.getDescription());
             }
-
+            if ( command.getOptions() != null ) upsertCommand.addOptions(command.getOptions());
+            if ( command.getSubcommandGroups() != null ) upsertCommand.addSubcommandGroups(command.getSubcommandGroups());
+            if ( command.getSubcommands() != null ) upsertCommand.addSubcommands(command.getSubcommands());
+            upsertCommand.queue();
         }
     }
 }
