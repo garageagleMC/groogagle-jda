@@ -44,6 +44,6 @@ discord:
   pt-question-role: '972149116773736478'
 
 version-control:
-  repository: 'groogagle'
+  repository: 'groogagle-jda'
   owner: 'garageagleMC'
   provider: 'github.com'

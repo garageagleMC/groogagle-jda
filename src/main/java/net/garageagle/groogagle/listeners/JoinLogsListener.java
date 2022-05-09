@@ -53,7 +53,7 @@ public class JoinLogsListener extends ListenerAdapter {
         TextChannel join_channel = jda.getTextChannelById(discordConfig.getPtJoinLogs());
         join_channel.sendMessageFormat(
                 "**%s** left the Purple Team Discord Server. Members in server: **%s**",
-                event.getUser().getAsMention(),
+                event.getUser().getAsTag(),
                 event.getGuild().getMemberCount()
         ).queue();
 
@@ -69,7 +69,7 @@ public class JoinLogsListener extends ListenerAdapter {
         TextChannel join_channel = jda.getTextChannelById(discordConfig.getPtJoinLogs());
         join_channel.sendMessageFormat(
                 "**%s** was **BANNED** from the Purple Team Discord Server! Members in server: **%s**",
-                event.getUser().getAsMention(),
+                event.getUser().getAsTag(),
                 event.getGuild().getMemberCount()
         ).queue();
 

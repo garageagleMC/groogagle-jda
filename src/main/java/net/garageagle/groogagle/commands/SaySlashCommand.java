@@ -24,8 +24,7 @@ public class SaySlashCommand extends SlashCommand {
 
     List<String> allowedUsers = List.of("165195486746116096",
                                         "212344168364638214",
-                                        "159714126128611328"
-                                        );
+                                        "159714126128611328");
 
     public SaySlashCommand() {
         setName("say");
